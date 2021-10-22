@@ -9,43 +9,36 @@ class MyEnvironment(ccm.Model):
     big=ccm.Model(size=3,location='left', state='not_clear')
 
 class MotorModule(ccm.Model):
-    def small_right(self):           
-        yield 2                   
+    def small_right(self):                    
         print "moving small right"
         self.parent.parent.small.location='right' 
         self.parent.parent.medium.state='clear' 
     
     def medium_middle(self):           
-        yield 2                   
         print "moving medium middle"
         self.parent.parent.medium.location='middle' 
         self.parent.parent.big.state='clear' 
 
     def small_middle(self):           
-        yield 2                   
         print "moving small middle"
         self.parent.parent.small.location='middle' 
         self.parent.parent.medium.state='not_clear' 
 
     def big_right(self):           
-        yield 2                   
         print "moving big right"
         self.parent.parent.big.location='right' 
 
     def small_left(self):           
-        yield 2                   
         print "moving small left"
         self.parent.parent.small.location='left' 
         self.parent.parent.medium.state='clear' 
 
-    def medium_right(self):           
-        yield 2                   
+    def medium_right(self):
         print "moving medium right"
         self.parent.parent.medium.location='right' 
         self.parent.parent.big.state='not_clear' 
 
-    def final_move(self):           
-        yield 2                   
+    def final_move(self):       
         print "moving small right"
         self.parent.parent.small.location='right' 
         self.parent.parent.medium.state='not_clear' 
