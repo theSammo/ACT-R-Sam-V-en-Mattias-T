@@ -62,37 +62,37 @@ class MyAgent(ACTR):
         focus.set('small right')
 
     def first_move(focus='small right', small='location:!right state:clear'):
-        print "I have a piece of bread"     
+        print "I have a small disk"     
         focus.set('medium middle')
         motor.small_right()
 
     def second_move(focus='medium middle', medium='location:!middle state:clear'):
-        print "I have a piece of pain"     
+        print "I have a medium disk"     
         focus.set('small middle')
         motor.medium_middle()
 
     def third_move(focus='small middle', small='location:!middle state:clear'):
-        print "I have a piece of cheese"     
+        print "I have a small disk"     
         focus.set('big right')
         motor.small_middle()
 
     def fourth_move(focus='big right', big='location:!right state:clear'):
-        print "I have a peace of mind"     
+        print "I have a big disk"     
         focus.set('small left')
         motor.big_right()
 
     def fifth_move(focus='small left', small='location:!left state:clear'):
-        print "I have a piece of a puzzle"     
+        print "I have a small disk"     
         focus.set('medium right')
         motor.small_left()
 
     def sixth_move(focus='medium right', medium='location:!right state:clear'):
-        print "I have a piece of the Triforce"     
+        print "I have a medium disk"     
         focus.set('final move')
         motor.medium_right()
 
     def final_move(focus='final move', small='location:!right state:clear'):
-        print "I have peas"     
+        print "I have a small disk"     
         focus.set('stop')
         motor.final_move()
 
